@@ -13,99 +13,305 @@
 	--link-color: #407ba7;
 	--title-color: #1f1f1f;
 	--text-color: #222222;
-    --font: 'Roboto', sans-serif;
+	--font: 'Roboto', sans-serif;
+    --h2:font-size: clamp(0.75rem, 0.41rem + 1.7vw, 1.5rem);
 
 	--drop-shadow: 16px, 4px, 4px rgba(0, 0, 0, 0.25);
-    --mobil:30em;/*480*/
-    --tablet:48em;/*768*/
-    --desktop:64em;/*1024*/
 }
-*,*::after,*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;    
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-    font-family: var(--font);
-    font-size: 16px;
+html {
+	scroll-behavior: smooth;
+	font-family: var(--font);
+	font-size: 16px;
 }
-body{
-    width:minmax(99vw,10vw - 100px);
-    width: 100%;
-    /* position: relative; */
+body {
+	width: minmax(99vw, 10vw - 100px);
+	width: 100%;
+	/* position: relative; */
 }
 /***********************
     GENERALES
 ***********************/
-a{
-    color: var(--link-color);
-    transition: opacity .5s ease-out;
+a {
+	color: var(--link-color);
+	transition: opacity 0.5s ease-out;
 }
-a:hover{
-    opacity: 0.75;
+a:hover {
+	opacity: 0.75;
 }
-h1,h2,h3,h4,h5,h6{
-    font-weight: 700;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
 }
 /*
 generador de clamp 
 https://utopia.fyi/type/calculator/?c=320,9,1.2,1024,18,1.25,1,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l 
 */
-h1{
-    font-size: clamp(1.00rem, 0.55rem + 2.27vw, 2.00rem);
+h1 {
+	font-size: clamp(1rem, 0.55rem + 2.27vw, 2rem);
 }
-h2{
-    font-size: clamp(0.75rem, 0.41rem + 1.70vw, 1.50rem);
+h2 {
+	font-size: clamp(0.75rem, 0.41rem + 1.7vw, 1.5rem);
 }
-h3{
-    font-size: clamp(0.56rem, 0.31rem + 1.28vw, 1.13rem);
+h3 {
+	font-size: clamp(0.56rem, 0.31rem + 1.28vw, 1.13rem);
 }
-h4{
-    font-size: clamp(0.50rem, 0.27rem + 1.14vw, 1.00rem);
+h4 {
+	font-size: clamp(0.5rem, 0.27rem + 1.14vw, 1rem);
 }
-h5{
-    font-size: clamp(0.41rem, 0.22rem + 0.92vw, 0.81rem);
+h5 {
+	font-size: clamp(0.41rem, 0.22rem + 0.92vw, 0.81rem);
 }
-h6{
-    font-size: clamp(0.34rem, 0.19rem + 0.78vw, 0.69rem);
+h6 {
+	font-size: clamp(0.34rem, 0.19rem + 0.78vw, 0.69rem);
 }
-img{
-    max-width: 100%;
-    height: auto;
+img {
+	max-width: 100%;
+	height: auto;
 }
-p{
-    line-height: 1.6;
+p {
+	line-height: 1.6;
 }
 
 /***********************
     COMPONENTES
 ***********************/
-.header-mobil{
-    position: fixed;
-    bottom: 0;
-    background-color: var(--second-color);
-    width: 100%;
-    height: 4rem;
+/**************** menu mobil ****************/
+
+.header-mobil {
+	position: fixed;
+	bottom: 0;
+	background-color: var(--second-color);
+	width: 100%;
+	height: 4rem;
+}
+/*disenio logo*/
+.logo {
+	position: absolute;
+	left: 0.5rem;
+	bottom: 0.5rem;
+	top: 0.5rem;
+	margin: auto;
+	width: 3rem;
+	background-color: var(--white-color);
+	border-radius: 50%;
+}
+/* disenio chechbox */
+.off-canvas-btn {
+	position: absolute;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	z-index: 999;
+	width: 3rem;
+	height: 3rem;
+	cursor: pointer;
+	background-color: goldenrod;
+	opacity: 0;
+}
+/* disenio burger */
+.off-canvas-burger {
+	position: absolute;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	z-index: 998;
+	width: 3rem;
+	height: 0.6rem;
+	border-radius: 0.3rem;
+	background-color: var(--first-color);
+	transform: rotate(0deg) translate(0, -1.2rem);
+	transform-origin: top left;
+	transition: transform 500ms ease, background-color 500ms ease;
+}
+.off-canvas-burger::before,
+.off-canvas-burger::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 0.6rem;
+	border-radius: 0.3rem;
+	background-color: #d00;
+	transition: transform 500ms ease;
+}
+.off-canvas-burger::before {
+	transform: rotate(0deg) translate(0, -0.9rem);
 }
 
+.off-canvas-burger::after {
+	transform: rotate(0deg) translate(0, 0.3rem);
+}
+/* funcionamiento  formacion x*/
+.off-canvas-btn:checked + .off-canvas-burger {
+	background-color: transparent;
+}
+
+.off-canvas-btn:checked + .off-canvas-burger::before {
+	transform: rotate(45deg) translate(0, 0);
+}
+
+.off-canvas-btn:checked + .off-canvas-burger::after {
+	transform: rotate(-45deg) translate(0.4rem, -0.5rem);
+}
+/* disenio menu*/
+.off-canvas-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 4rem;
+	right: 0;
+	z-index: 997;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0008;
+	transition: transform 500ms ease-in-out;
+
+	transform: translate(0, -100%);
+	transform: translate(0, 100%);
+	transform: translate(100%, 0);
+	transform: translate(-100%, 0);
+}
+.off-canvas-menu-container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.off-canvas-link {
+	border-bottom: thin solid #d00;
+	padding: 1.5rem;
+	font-size: 1.5rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	transition: background-color 300ms ease;
+}
+.off-canvas-link:hover {
+	background-color: #d005;
+}
+.off-canvas-link:first-child {
+	border-top: thin solid #d00;
+}
+/* function click of amburguesa */
+.off-canvas-btn:checked ~ .off-canvas-menu {
+	transform: translate(0, 0);
+}
+@media screen and (min-width: 30em) {
+}
+@media screen and (min-width: 48em) {
+    .off-canvas-link{
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 64em) {
+	.header-mobil {
+		position: sticky;
+		top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+	}
+
+	.off-canvas-menu-container {
+		position: static;
+		flex-direction: row;
+	}
+	.off-canvas-menu-container {
+		height: auto;
+	}
+	.off-canvas-link {
+		padding: 1rem;
+        font-size: var(--h2);
+	}   
+	.off-canvas-link:first-child {
+		border-top: none;
+	}
+	.off-canvas-btn,
+	.off-canvas-burger {
+		display: none;
+	}
+	.container-xxl {
+		max-width: 90%;
+		margin: auto;
+		/* background-color: red; */
+	}
+	.fila-header {
+        width: 100%;
+		display: flex;
+		flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+	}
+	.logo {
+		position: static;
+		width: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        margin: 0;
+	}
+	.off-canvas-menu {
+		transform: translate(0, 0);
+		position: static;
+	}
+    .off-canvas-link{
+        text-transform: uppercase;
+        position: relative;
+        border: none;
+
+    }
+    .off-canvas-link:hover::after{
+        position: absolute;
+        content: "";
+        width: 48%;
+        left: 0;
+        bottom: .4rem;
+        right: 0;
+        margin: auto;
+        background: var(--first-color);
+        height: 4px;
+    }
+    .off-canvas-link:hover::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        left: 0;
+        bottom: 0rem;
+        right: 0;
+        margin: auto;
+        background: var(--first-color);
+        height: 4px;
+    }
+    .off-canvas-link:hover{
+        transform: scale(1.2);
+        background: transparent;
+    }
+}
 
 /***********************
     UTILITIES
 ***********************/
 
-
 /* escritorio */
-@media screen and (min-width:var(--mobil)){
+@media screen and (min-width: 30em) {
 }
-@media screen and (min-width:var(--tablet)){
+@media screen and (min-width: 48em) {
 }
-@media screen and (min-width:var(--desktop)){
+@media screen and (min-width: 64em) {
 }
-
 
 /***********************
     STYLES SITE
 ***********************/
-
-
