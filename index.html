@@ -53,67 +53,169 @@
 		<!-- stylos css -->
 		<link rel="stylesheet" href="css/styles.css" />
 	</head>
-	<body >
-		<div class="header-mobil">
-			<div class="container-xxl fila-header">
-				<label class="logo">
-					<img src="./assets/logo/favicon2.png" alt="" />
-				</label>
-				
-				<input type="checkbox" class="off-canvas-btn" />
-				<label class="off-canvas-burger"></label>
-				<nav class="off-canvas-menu">
-					<div class="off-canvas-menu-container">
-						<a href="#" class="off-canvas-link">INICIO</a>
-						<a href="#" class="off-canvas-link">QUINES SOMOS</a>
-						<a href="#" class="off-canvas-link">SERVICIOS</a>
-						<a href="#" class="off-canvas-link">PRODUCTOS</a>
-						<a href="#" class="off-canvas-link">TESTIMONIO</a>
-						<a href="#" class="off-canvas-link">COTIZACION</a>
+	<body>
+		<div class="grid-container">
+			<header class="header header-mobil">
+				<div class="container-xxl fila-header">
+					<label class="logo">
+						<img src="./assets/logo/favicon2.png" alt="" />
+					</label>
+
+					<input type="checkbox" class="off-canvas-btn" />
+					<label class="off-canvas-burger"></label>
+					<nav class="off-canvas-menu">
+						<div class="off-canvas-menu-container">
+							<a href="#" class="off-canvas-link"><span>INICIO</span></a>
+							<a href="#" class="off-canvas-link"><span>QUINES SOMOS</span> </a>
+							<a href="#" class="off-canvas-link"><span>SERVICIOS</span></a>
+							<a href="#" class="off-canvas-link"><span>PRODUCTOS</span></a>
+							<a href="#" class="off-canvas-link"><span>TESTIMONIO</span></a>
+							<a href="#" class="off-canvas-link"><span>COTIZACION</span></a>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<main class="carouseRow">
+				<div class="carousel" id="nSlides">
+					<input type="radio" name="slides" id="slide-1" checked />
+					<input type="radio" name="slides" id="slide-2" />
+					<input type="radio" name="slides" id="slide-3" />
+					<input type="radio" name="slides" id="slide-4" />
+
+					<ul class="slides">
+						<li class="slide">
+							<div class="carousel-container">
+								<div class="carousel-info">
+									<h1>Titulo1</h1>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									</p>
+									<a class="bottom-primary" href="#">Contactenos</a>
+								</div>
+							</div>
+						</li>
+						<li class="slide">
+							<div class="carousel-container">
+								<div class="carousel-info">
+									<h1>Titulo2</h1>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									</p>
+									<a class="bottom-primary" href="#">Contactenos</a>
+								</div>
+							</div>
+						</li>
+						<li class="slide">
+							<div class="carousel-container">
+								<div class="carousel-info">
+									<h1>Titulo3</h1>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									</p>
+									<a class="bottom-primary" href="#">Contactenos</a>
+								</div>
+							</div>
+						</li>
+						<li class="slide">
+							<div class="carousel-container">
+								<div class="carousel-info">
+									<h1>Titulo4</h1>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									</p>
+									<a class="bottom-primary" href="#">Contactenos</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="btn-absolute">
+						<div id="less" class="btn btn-right">
+							<img src="./assets/icon/btn-left.svg" alt="" />
+						</div>
+
+						<div class="btn btn-bottom">
+							<aside class="slides-nav">
+								<label for="slide-1" id="dot-1"></label>
+								<label for="slide-2" id="dot-2"></label>
+								<label for="slide-3" id="dot-3"></label>
+								<label for="slide-4" id="dot-4"></label>
+							</aside>
+						</div>
+						<div id="must" class="btn btn-left">
+							<img src="./assets/icon/btn-right.svg" alt="" />
+						</div>
 					</div>
-				</nav>
-			</div>
+				</div>
+			</main>
+			<section class="about container-xxl">
+				
+				<div class="row-center">
+					<div class="title-secondary">¿Quienes somos?</div>
+				</div>
+				<div class="about-video pTL16">
+					<iframe
+						width="727"
+						height="409"
+						src="https://www.youtube.com/embed/Asij7V0hlPM"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+				<div class="row-about-alter">
+					<div class="row-about">
+						<div class="row-about-container">
+							<h3>Learning to code</h3>
+							<h4>OPENING A DOOR TO THE FUTURS</h4>
+							<div class="row-about_barra"></div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+								ipsum urna id nibh quam auctor netus eget enim. At id iaculis et
+								ridiculus velit sed pulvinar. In nec sed in loreTm sed eget
+								laoreet id donec. Mauris at at neque enim.
+							</p>
+							<a href="#">Leer mas</a>
+						</div>
+						<div
+							style="--about-img1: url('../assets/about/about1.jpg')"
+							class="row-about_imagen"
+						>
+							<!-- <img src="./assets/about/about2.jpg" alt="image 1" /> -->
+						</div>
+					</div>
+					<div class="row-about">
+						<div class="row-about-container order-about1">
+							<h3>Learning to code</h3>
+							<h4>OPENING A DOOR TO THE FUTURS</h4>
+							<div class="row-about_barra"></div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+								ipsum urna id nibh quam auctor netus eget enim. At id iaculis et
+								ridiculus velit sed pulvinar. In nec sed in loreTm sed eget
+								laoreet id donec. Mauris at at neque enim.
+							</p>
+							<a href="#">Leer mas</a>
+						</div>
+						<div
+							class="row-about_imagen order-about2"
+							style="--about-img1: url('../assets/about/about2.jpg')"
+						>
+							<!-- <img src="./assets/about/about2.jpg" alt="image 1" /> -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="products">products
+				<div class="div">
+					hola soy dib
+				</div>
+			</section>
+			<section class="services">services</section>
+			<section class="contact">contact</section>
+			<section class="quote">quote</section>
+			<footer class="footer">footer</footer>
 		</div>
-		<h1>Security Camera</h1>
-		<h2>Security Camera</h2>
-		<h3>Security Camera</h3>
-		<h4>Security Camera</h4>
-		<h6>Security Camera</h6>
-		<h1>Security Camera</h1>
-		<h2>Security Camera</h2>
-		<h3>Security Camera</h3>
-		<h4>Security Camera</h4>
-		<h6>Security Camera</h6>
-		<h1>Security Camera</h1>
-		<h2>Security Camera</h2>
-		<h3>Security Camera</h3>
-		<h4>Security Camera</h4>
-		<h6>Security Camera</h6>
-		<h1>Security Camera</h1>
-		<h2>Security Camera</h2>
-		<h3>Security Camera</h3>
-		<h4>Security Camera</h4>
-		<h6>Security Camera</h6>
-		<h1>Security Camera</h1>
-		<h2>Security Camera</h2>
-		<h3>Security Camera</h3>
-		<h4>Security Camera</h4>
-		<h6>Security Camera</h6>
-		<h1>Security Camera</h1>
-		<h2>Security Camera</h2>
-		<h3>Security Camera</h3>
-		<h4>Security Camera</h4>
-		<h6>Security Camera</h6>
-		<h1>Security Camera</h1>
-		<h2>Security Camera</h2>
-		<h3>Security Camera</h3>
-		<h4>Security Camera</h4>
-		<h6>Security Camera</h6>
-		<h1>Security Camera</h1>
-		<h2>Security Camera</h2>
-		<h3>Security Camera</h3>
-		<h4>Security Camera</h4>
-		<h6>Security Camera</h6>
-		<br />
+		<script src="./js/main.js"></script>
 	</body>
 </html>
