@@ -404,7 +404,7 @@ p {
 	}
 }
 /*************************carousel*************************/
-@keyframes carousel-slide {
+/* @keyframes carousel-slide {
 	0% {
 		transform: translateX(0%);
 	}
@@ -420,7 +420,7 @@ p {
 	75% {
 		transform: translateX(-75%);
 	}
-}
+} */
 
 .carousel {
 	max-width: 100%;
@@ -439,7 +439,7 @@ p {
 
 	position: absolute;
 	transition: all 0.3s ease-in-out;
-	animation: carousel-slide 40s ease-in-out 3s infinite;
+	/* animation: carousel-slide 40s ease-in-out 3s infinite; */
 }
 .slide {
 	background-color: red;
