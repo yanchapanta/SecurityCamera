@@ -129,7 +129,7 @@ p {
 }
 .quote {
 	grid-area: quote;
-	background-color: rgb(255, 0, 0);
+	background-color: white;
 }
 .footer {
 	grid-area: footer;
@@ -931,7 +931,7 @@ p {
 	}
 }
 /*******************Contacto*******************/
-.contact{
+.contactos{
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -971,7 +971,7 @@ p {
 
 }
 input{
-	width: 100%;
+	/* width: 100%; */
 	padding: .3rem;
 	outline: none;
 	border: none;
@@ -983,6 +983,7 @@ input[type='text']::placeholder{
 	color: rgb(var(--black-color-rgba),.4);
 }
 .form-contact{
+	width: 100%;
 	box-shadow: var(--drop-shadow);
 	display: flex;
 	flex-direction: column;
@@ -1033,7 +1034,11 @@ input[type='text']::placeholder{
 	}
 	.form-center{
 		align-self: center;
-		width: 50%;
+		width: 80%;
+		
+	}
+	.form-contact {
+		padding: 2rem;
 	}
 	.social-media {
 		width: 100%;
@@ -1044,6 +1049,167 @@ input[type='text']::placeholder{
 		width: 10rem;
 	}
 }
+
+
+/********************** <!--
+	Cotiza tu alarma
+--> **********************/
+.quote{
+	margin-top: 2rem;
+
+}
+.quote-container{
+	width: 100vw;
+	height: 100%;
+	box-sizing: border-box;
+	margin: auto;
+	padding: 1rem;
+	padding-bottom: 2rem;
+	position: relative;
+
+}
+.quote-bar{
+	display: block;
+	width: 100%;
+	background-color: var(--black-color);
+	height: 1rem;
+
+	display: flex;
+	flex-grow: 1;
+}
+.quote  h3{
+	font-size: calc(var(--h3) + .54rem);
+}
+.quote-bar > div{
+	width: 100%;
+}
+.quote-bar-active{
+	background-color: var(--boton-red);
+}
+.quote-bar-icon{
+	width: calc(100% - 1rem);
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(81px,116px));
+	grid-auto-rows: 150px;
+	justify-content: space-between;
+}
+.quote-bar-icon > div{
+
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+}
+.icono-bar{
+	display: inline-block;
+	background-color: var(--first-alpha-color);
+	font-size: clamp(1rem,5rem,6rem);
+	border-radius: 10px;
+	padding: .5rem;
+	justify-content: center;
+	justify-items: center;
+
+
+}
+.quote-bar-icon  p{
+	font-size: var(--h3);
+	text-align: center;
+
+}
+.quote-bar-door{
+	/* width: calc(100% - 1rem); */
+	width: 100%;
+	gap: .5rem;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 40% 60%;
+	justify-content: space-around;
+	place-items: center;
+}
+.quote-bar-door .icono-bar{
+	padding: 0;
+	font-size: clamp(1rem,5rem,10rem);
+}
+
+
+.btn-list > .btn-numeral{
+	position: relative;
+	padding: .3rem 1rem;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+}
+.btn-list > .btn-numeral:hover{
+	border: thin solid #ccc;
+}
+.btn-list{
+	width: 100%;
+	display: grid;
+	gap: .5rem;
+	grid-template-columns: repeat(auto-fill,minmax(5px,45px));
+	grid-template-rows: minmax(5px,45px);
+}
+.btn-list button:last-child{
+	padding: .1rem;
+}
+.d-grid{
+display: grid;
+width: 100%;
+}
+.g-auto-row{
+	grid-auto-rows: auto;
+
+}
+.gap-1{
+	gap: 1rem;
+}
+.justify-content-initial{
+	justify-content: initial;
+}
+.thanks h3{
+	font-size:calc(var(--h3) + 1rem);
+}
+.thanks-email{
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	
+}
+/* <!-- 
+integracion de slider preguntas
+--> */
+
+.quote-example{
+	position: relative;
+	width: 100%;
+		height: auto;
+	overflow: hidden;
+}
+.quote button{
+	position: absolute;
+	bottom: 1rem;
+	right:  .5rem;
+	
+}
+.btn-ambiental{
+	width: 50%;
+}
+.quote-sliders{
+	position: relative;
+	width: 400%;
+	height: 100%;
+	transform: translateX(-0%);
+	display: flex;
+}
+.quote-slider{
+	width: 100%;
+	height: 100%;
+}
+
+
 /***********************
     UTILITIES
 ***********************/
