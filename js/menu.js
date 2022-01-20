@@ -7,8 +7,9 @@ let url2='../components/carousel.html';
 let url3='../components/about.html';
 let url4='../components/products.html';
 let url5='../components/service.html';
-let url6='../components/quote.html';
-let url7='../components/footer.html';
+let url6='../components/contact.html';
+let url7='../components/quote.html';
+let url8='../components/footer.html';
 
 window.addEventListener('load',event=>{
     function cargarPage(url){
@@ -37,7 +38,8 @@ window.addEventListener('load',event=>{
         result6
         const result7= await cargarPage(url7);
         result7
-        // expected output: "resolved"
+        const result8= await cargarPage(url8);
+        result8
       }
       
       ejecutarAsync();
