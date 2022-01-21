@@ -5,20 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet"/>
 </head>
 <style>
+
+    
+
+/* div principal*/
+
+body {margin:0;}
+
+.presentacion {
+height:400px;
+padding: 250px 0;
+background-color:#000;
+}
+
+/*Usando el gradiente en CSS3 a través de webkit */
+
+.presentacion h2{
+font-family: 'Mina', sans-serif;
+font-size:75px;
+color:#fff;
+background-image: linear-gradient(45deg,#365899 0%,#992a09 35%,#a76c51 85%,#a76c51 100%);
+    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+color:#fff;
+margin-left:40px;
+}
+
+
+
+
+/* 
     *{
         margin: 0;
-        height: 0;
+        padding:  0;
     }
 .grid-container{
-    /* max-width: 200px; */
-    /* width: 100vw; */
+
     width: 100%;
     display: grid;
     border: thin solid red;
-    /* grid-template-columns: repeat(auto-fill,100px); */
-    /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); */
+
     grid-template-columns: repeat(3,150px);
     grid-auto-rows: 150px;
     justify-content:center;
@@ -28,13 +57,28 @@
 }
 .div{
     place-self: center;
-    /* width: 100%;
-    height: 100%; */
+   
     border: thin solid green;
-}
+} */
+
 
 </style>
 <body>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<div class="presentacion">
+    <h2 class="titulo">Bienvenidos a EntreBits</h2>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
     <div class="grid-container">
         <div class="div caja4"><p>caja1</p></div>
         <div class="div caja4"><p>caja2</p></div>
@@ -90,3 +134,7 @@
 
 </body>
 </html>
+
+
+
+
